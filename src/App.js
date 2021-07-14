@@ -10,7 +10,10 @@ const App = () => {
 	const likePost = (postId) => {
 		posts.map((post) => {
 			if (postId === post.id) {
-				return { ...post, likes: post.likes + 1 };
+				post.likes++;
+				const copyOfPost = [...posts];
+				console.log(post.likes);
+				setPosts(copyOfPost);
 			} else {
 				return post;
 			}

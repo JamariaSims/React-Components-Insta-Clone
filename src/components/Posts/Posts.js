@@ -7,9 +7,9 @@ const Posts = (props) => {
 	const { likePost, posts } = props;
 
 	return (
-		<div key={new Date()} className="posts-container-wrapper">
+		<div className="posts-container-wrapper">
 			{posts.map((post) => {
-				return <Post post={post} likePost={likePost} />;
+				return <Post key={Math.random()} post={post} likePost={likePost} />;
 			})}
 		</div>
 	);

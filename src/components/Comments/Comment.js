@@ -8,9 +8,8 @@ const Comment = (props) => {
 	return (
 		<div key={new Date() + comment.key} className="comment-text">
 			<span className="user">{comment.username}</span>
-
 			<span key={new Date() + comment.key} className="comment">
-				{comment.text}
+				{` ${comment.text}`}
 			</span>
 		</div>
 	);
